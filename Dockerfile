@@ -3,7 +3,7 @@ ARG XX_VERSION=1.9.0
 
 FROM --platform=$BUILDPLATFORM tonistiigi/xx:${XX_VERSION} AS xx
 
-# Docker buildkit multi-arch build requires golang alpine
+# Docker buildkit multi-arch build requires golang alpine 
 FROM --platform=$BUILDPLATFORM golang:${GO_VERSION}-alpine AS builder
 
 # Copy the build utilities.
